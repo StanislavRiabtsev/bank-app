@@ -36,3 +36,15 @@ btnScrollTo.addEventListener('click', function (e) {
   e.preventDefault();
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+// Page navigation
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
